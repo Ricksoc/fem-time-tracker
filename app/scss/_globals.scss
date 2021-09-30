@@ -22,8 +22,14 @@ button {
   font-family: inherit;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
-  margin: 30px 10px;
+  padding: 50px 15px;
+  max-width: 410px;
   background-color: $vd-blue;
   display: flex;
   flex-direction: column;
