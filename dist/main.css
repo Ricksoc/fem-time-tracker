@@ -21,6 +21,19 @@ button {
   font-family: inherit;
 }
 
+.container {
+  margin: 30px 10px;
+  background-color: #0f1424;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-card-top {
+  display: flex;
+  background-color: #5847eb;
+  color: #bdc1ff;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

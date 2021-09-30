@@ -1,0 +1,7 @@
+@use "./util" as *;
+
+.profile-card-top {
+  display: flex;
+  background-color: $primary-blue;
+  color: $pale-blue;
+}

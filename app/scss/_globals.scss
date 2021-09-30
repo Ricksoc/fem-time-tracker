@@ -21,3 +21,10 @@ textarea,
 button {
   font-family: inherit;
 }
+
+.container {
+  margin: 30px 10px;
+  background-color: $vd-blue;
+  display: flex;
+  flex-direction: column;
+}
