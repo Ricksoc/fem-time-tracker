@@ -11,11 +11,12 @@
   height: 40px;
   border-radius: 5px 5px 0 0;
 
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 30%;
+
   &__work {
-    background-image: url("/images/icon-work.svg");
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: 30%;
     background-color: $l-red-work;
+    background-image: url("/images/icon-work.svg");
   }
 }
