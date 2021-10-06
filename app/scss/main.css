@@ -1,0 +1,135 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  padding: 50px 15px;
+  max-width: 410px;
+  background-color: #0f1424;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-card-top {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: 5%;
+  background-color: #5847eb;
+  color: #bdc1ff;
+}
+.profile-card-top img {
+  margin: 20px 10px 20px 15px;
+  width: 50px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+
+.intro {
+  margin-bottom: 3px;
+  font-size: 0.625rem;
+}
+
+.name {
+  margin-top: 3px;
+  margin-right: 20px;
+  font-size: 1rem;
+  color: #bdc1ff;
+}
+
+.profile-card-bottom {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-radius: 0 0 5px 5px;
+  margin-top: -3px;
+  background-color: #1c1f4a;
+}
+.profile-card-bottom__container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.profile-card-bottom__btn {
+  border: none;
+  background: none;
+  font-size: 0.75rem;
+  color: #6f76c8;
+}
+.profile-card-bottom__btn:first-child {
+  margin-left: 10px;
+}
+.profile-card-bottom__btn:last-child {
+  margin-right: 10px;
+}
+.profile-card-bottom__btn.active {
+  color: #bdc1ff;
+}
+
+.activity-card {
+  margin: 10px 0;
+}
+
+.activity-card-top {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px 10px 0 0;
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 30%;
+}
+.activity-card-top__work {
+  background-color: #ff8c66;
+  background-image: url("/images/icon-work.svg");
+}
+
+.activity-card-bottom {
+  display: grid;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  margin-top: -10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: stretch;
+  background-color: #1c1f4a;
+}
+.activity-card-bottom a {
+  justify-self: end;
+  top: 50%;
+  transform: translateY(28%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}/*# sourceMappingURL=main.css.map */
