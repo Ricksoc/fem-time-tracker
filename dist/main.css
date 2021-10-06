@@ -126,6 +126,10 @@ main {
   transform: translateY(28%);
 }
 
+form {
+  background-color: blue;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
