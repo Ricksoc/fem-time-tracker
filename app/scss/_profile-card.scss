@@ -7,12 +7,12 @@
   border-radius: 5%;
   background-color: $primary-blue;
   color: $pale-blue;
-  
+
   & img {
     margin: 20px 10px 20px 15px;
     width: 50px;
     border-radius: 100%;
-    border: 2px solid white
+    border: 2px solid white;
   }
 }
 
@@ -35,12 +35,11 @@
   border-radius: 0 0 5px 5px;
   margin-top: -3px;
   background-color: $d-blue;
-  
+
   &__container {
     display: flex;
     width: 100%;
     justify-content: space-between;
-
   }
 
   &__btn {
@@ -58,7 +57,7 @@
     }
 
     &.active {
-      color: $pale-blue;
+      color: white;
     }
   }
 }

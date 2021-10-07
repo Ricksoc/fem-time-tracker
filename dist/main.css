@@ -87,7 +87,7 @@ main {
   margin-right: 10px;
 }
 .profile-card-bottom__btn.active {
-  color: #bdc1ff;
+  color: white;
 }
 
 .activity-card {
@@ -110,20 +110,46 @@ main {
 }
 
 .activity-card-bottom {
-  display: grid;
   position: relative;
   z-index: 1;
   border-radius: 10px;
   margin-top: -10px;
+  background-color: #1c1f4a;
+  color: white;
+}
+
+.grid-container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   align-items: stretch;
-  background-color: #1c1f4a;
 }
-.activity-card-bottom a {
+.grid-container h6 {
+  margin-bottom: 10px;
+}
+.grid-container a {
   justify-self: end;
   top: 50%;
-  transform: translateY(28%);
+  transform: translateY(38%);
+}
+.grid-container p {
+  display: inline-block;
+  height: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.grid-container p.previous-activity {
+  display: flex;
+  justify-content: end;
+  margin-top: 4px;
+}
+.grid-container span {
+  display: inline-block;
+  height: 30px;
+  color: #bdc1ff;
+  font-size: 0.625rem;
 }
 
 .attribution {

@@ -22,19 +22,49 @@
 }
 
 .activity-card-bottom {
-  display: grid;
   position: relative;
   z-index: 1;
   border-radius: 10px;
   margin-top: -10px;
+  background-color: $d-blue;
+  color: white;
+}
+
+.grid-container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   align-items: stretch;
-  background-color: $d-blue;
+
+  h6 {
+    margin-bottom: 10px;
+  }
 
   a {
     justify-self: end;
     top: 50%;
-    transform: translateY(28%);
+    transform: translateY(38%);
+  }
+
+  p {
+    display: inline-block;
+    height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &.previous-activity {
+      display: flex;
+      justify-content: end;
+      margin-top: 4px;
+    }
+  }
+
+  span {
+    display: inline-block;
+    height: 30px;
+    color: $pale-blue;
+    font-size: rem(10);
   }
 }
