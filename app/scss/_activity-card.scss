@@ -12,17 +12,44 @@
   border-radius: 10px 10px 0 0;
 
   background-repeat: no-repeat;
-  background-position-x: 95%;
-  background-position-y: 30%;
+  background-size: 30%;
+  background-position-x: 92%;
+  background-position-y: 25%;
 
   &__work {
     background-color: $l-red-work;
     background-image: url("/images/icon-work.svg");
   }
+
+  &__play {
+    background-color: $l-blue-play;
+    background-image: url("/images/icon-play.svg");
+  }
+
+  &__study {
+    background-color: $l-red-study;
+    background-image: url("/images/icon-study.svg");
+  }
+
+  &__exercise {
+    background-color: $l-green-exercise;
+    background-image: url("/images/icon-exercise.svg");
+  }
+
+  &__social {
+    background-color: $violet-social;
+    background-image: url("/images/icon-social.svg");
+  }
+
+  &__self {
+    background-color: $orange-self-care;
+    background-image: url("/images/icon-self-care.svg");
+  }
 }
 
 .activity-card-bottom {
   position: relative;
+  height: 90px;
   z-index: 1;
   border-radius: 10px;
   margin-top: -10px;
