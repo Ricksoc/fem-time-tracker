@@ -4,6 +4,25 @@
   margin: 10px 0;
 }
 
+.activity-card-work {
+  grid-area: work;
+}
+.activity-card-play {
+  grid-area: play;
+}
+.activity-card-study {
+  grid-area: study;
+}
+.activity-card-exercise {
+  grid-area: exercise;
+}
+.actiivity-card-social {
+  grid-area: social;
+}
+.activity-card-self {
+  grid-area: self;
+}
+
 .activity-card-top {
   display: inline-block;
   position: relative;

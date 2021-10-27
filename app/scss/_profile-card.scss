@@ -1,5 +1,9 @@
 @use "./util" as *;
 
+.profile-card {
+  grid-area: profile;
+}
+
 .profile-card-top {
   display: flex;
   position: relative;

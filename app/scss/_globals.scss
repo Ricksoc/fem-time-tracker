@@ -33,4 +33,13 @@ main {
   background-color: $vd-blue;
   display: flex;
   flex-direction: column;
+
+  @include breakpoint-up(desktop) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "profile work play study"
+      "profile exercise social self";
+  }
 }

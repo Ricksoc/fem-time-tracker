@@ -33,6 +33,18 @@ main {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 920px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "profile work play study" "profile exercise social self";
+  }
+}
+
+.profile-card {
+  grid-area: profile;
+}
 
 .profile-card-top {
   display: flex;
@@ -92,6 +104,30 @@ main {
 
 .activity-card {
   margin: 10px 0;
+}
+
+.activity-card-work {
+  grid-area: work;
+}
+
+.activity-card-play {
+  grid-area: play;
+}
+
+.activity-card-study {
+  grid-area: study;
+}
+
+.activity-card-exercise {
+  grid-area: exercise;
+}
+
+.actiivity-card-social {
+  grid-area: social;
+}
+
+.activity-card-self {
+  grid-area: self;
 }
 
 .activity-card-top {
