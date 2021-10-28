@@ -35,9 +35,12 @@ main {
 }
 @media (min-width: 920px) {
   .container {
+    max-width: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
     grid-template-areas: "profile work play study" "profile exercise social self";
   }
 }
