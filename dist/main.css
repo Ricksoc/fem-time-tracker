@@ -48,6 +48,11 @@ main {
 .profile-card {
   grid-area: profile;
 }
+@media (min-width: 920px) {
+  .profile-card {
+    width: 120px;
+  }
+}
 
 .profile-card-top {
   display: flex;
@@ -56,6 +61,12 @@ main {
   border-radius: 5%;
   background-color: #5847eb;
   color: #bdc1ff;
+}
+@media (min-width: 920px) {
+  .profile-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .profile-card-top img {
   margin: 20px 10px 20px 15px;
@@ -67,6 +78,7 @@ main {
 .intro {
   margin-bottom: 3px;
   font-size: 0.625rem;
+  margin-left: 18px;
 }
 
 .name {
@@ -74,6 +86,7 @@ main {
   margin-right: 20px;
   font-size: 1rem;
   color: #bdc1ff;
+  margin-left: 18px;
 }
 
 .profile-card-bottom {
@@ -84,10 +97,21 @@ main {
   margin-top: -3px;
   background-color: #1c1f4a;
 }
+@media (min-width: 920px) {
+  .profile-card-bottom {
+    height: 100px;
+  }
+}
 .profile-card-bottom__container {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+@media (min-width: 920px) {
+  .profile-card-bottom__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .profile-card-bottom__btn {
   border: none;
@@ -95,11 +119,19 @@ main {
   font-size: 0.75rem;
   color: #6f76c8;
 }
-.profile-card-bottom__btn:first-child {
-  margin-left: 10px;
+@media (min-width: 920px) {
+  .profile-card-bottom__btn {
+    margin-left: 12px;
+    margin-top: 10px;
+  }
 }
-.profile-card-bottom__btn:last-child {
-  margin-right: 10px;
+@media (max-width: 899px) {
+  .profile-card-bottom__btn:first-child {
+    margin-left: 10px;
+  }
+  .profile-card-bottom__btn:last-child {
+    margin-right: 10px;
+  }
 }
 .profile-card-bottom__btn.active {
   color: white;

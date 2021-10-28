@@ -2,6 +2,10 @@
 
 .profile-card {
   grid-area: profile;
+
+  @include breakpoint-up(desktop) {
+    width: 120px;
+  }
 }
 
 .profile-card-top {
@@ -11,6 +15,11 @@
   border-radius: 5%;
   background-color: $primary-blue;
   color: $pale-blue;
+
+  @include breakpoint-up(desktop) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
   & img {
     margin: 20px 10px 20px 15px;
@@ -23,6 +32,7 @@
 .intro {
   margin-bottom: 3px;
   font-size: rem(10);
+  margin-left: 18px;
 }
 
 .name {
@@ -30,6 +40,7 @@
   margin-right: 20px;
   font-size: rem(16);
   color: $pale-blue;
+  margin-left: 18px;
 }
 
 .profile-card-bottom {
@@ -40,10 +51,19 @@
   margin-top: -3px;
   background-color: $d-blue;
 
+  @include breakpoint-up(desktop) {
+    height: 100px;
+  }
+
   &__container {
     display: flex;
     width: 100%;
     justify-content: space-between;
+
+    @include breakpoint-up(desktop) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__btn {
@@ -52,12 +72,19 @@
     font-size: rem(12);
     color: $desat-blue;
 
-    &:first-child {
-      margin-left: 10px;
+    @include breakpoint-up(desktop) {
+      margin-left: 12px;
+      margin-top: 10px;
     }
 
-    &:last-child {
-      margin-right: 10px;
+    @include breakpoint-down(mobile) {
+      &:first-child {
+        margin-left: 10px;
+      }
+
+      &:last-child {
+        margin-right: 10px;
+      }
     }
 
     &.active {
