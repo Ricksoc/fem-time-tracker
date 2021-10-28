@@ -39,7 +39,8 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    column-gap: 10px;
+    justify-items: center;
+    // column-gap: 10px;
     grid-template-areas:
       "profile work play study"
       "profile exercise social self";

@@ -39,8 +39,7 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    justify-items: center;
     grid-template-areas: "profile work play study" "profile exercise social self";
   }
 }
