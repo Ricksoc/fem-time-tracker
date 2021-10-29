@@ -24,6 +24,7 @@ button {
 main {
   display: flex;
   justify-content: center;
+  margin: 10vh auto;
 }
 
 .container {
@@ -40,6 +41,8 @@ main {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     justify-items: center;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
     grid-template-areas: "profile work play study" "profile exercise social self";
   }
 }
@@ -72,6 +75,11 @@ main {
   width: 50px;
   border-radius: 100%;
   border: 2px solid white;
+}
+@media (min-width: 920px) {
+  .profile-card-top img {
+    margin: 20px 10px 0 15px;
+  }
 }
 
 .intro {
@@ -138,6 +146,11 @@ main {
 
 .activity-card {
   margin: 10px 0;
+}
+@media (min-width: 920px) {
+  .activity-card {
+    margin: 0;
+  }
 }
 
 .activity-card-work {
@@ -209,6 +222,12 @@ main {
   background-color: #1c1f4a;
   color: white;
 }
+@media (min-width: 920px) {
+  .activity-card-bottom {
+    height: auto;
+    margin-top: -20px;
+  }
+}
 
 .grid-container {
   width: 90%;
@@ -218,13 +237,47 @@ main {
   grid-template-rows: 1fr 1fr;
   align-items: stretch;
 }
+@media (min-width: 920px) {
+  .grid-container {
+    grid-template-columns: 60px 60px;
+    grid-template-rows: 25px 40px 25px;
+    grid-template-areas: "activity icon" "time time" "previous previous";
+    padding-top: 10px;
+  }
+  .grid-container .activity-card__title {
+    grid-area: activity;
+    align-self: end;
+  }
+  .grid-container .activity-card-icon {
+    grid-area: icon;
+  }
+  .grid-container .current-time {
+    grid-area: time;
+    align-self: center;
+    font-size: 24px;
+  }
+  .grid-container .previous-activity {
+    grid-area: previous;
+    align-self: center;
+    justify-self: start;
+  }
+}
 .grid-container h6 {
   margin-bottom: 10px;
 }
-.grid-container a {
-  justify-self: end;
-  top: 50%;
-  transform: translateY(38%);
+@media (min-width: ) {
+  .grid-container a {
+    justify-self: end;
+    top: 50%;
+    transform: translateY(38%);
+  }
+}
+@media (min-width: 920px) {
+  .grid-container a {
+    margin-left: 25px;
+    top: 50%;
+    transform: translateY(-15%);
+  }
 }
 .grid-container p {
   display: inline-block;

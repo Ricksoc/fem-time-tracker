@@ -2,6 +2,10 @@
 
 .activity-card {
   margin: 10px 0;
+
+  @include breakpoint-up(desktop) {
+    margin: 0;
+  }
 }
 
 .activity-card-work {
@@ -74,6 +78,11 @@
   margin-top: -10px;
   background-color: $d-blue;
   color: white;
+
+  @include breakpoint-up(desktop) {
+    height: auto;
+    margin-top: -20px;
+  }
 }
 
 .grid-container {
@@ -84,14 +93,54 @@
   grid-template-rows: 1fr 1fr;
   align-items: stretch;
 
+  @include breakpoint-up(desktop) {
+    grid-template-columns: 60px 60px;
+    grid-template-rows: 25px 40px 25px;
+    grid-template-areas:
+      "activity icon"
+      "time time"
+      "previous previous";
+
+      padding-top: 10px;
+
+    .activity-card__title {
+      grid-area: activity;
+      align-self: end;
+    }
+
+    .activity-card-icon {
+      grid-area: icon;
+    }
+
+    .current-time {
+      grid-area: time;
+      align-self: center;
+      font-size: 24px;
+    }
+    .previous-activity {
+      grid-area: previous;
+      align-self: center;
+      justify-self: start;
+      // margin-bottom: 10px;
+    }
+  }
+
   h6 {
     margin-bottom: 10px;
   }
 
   a {
-    justify-self: end;
-    top: 50%;
-    transform: translateY(38%);
+    @include breakpoint-up(mobile) {
+      justify-self: end;
+      top: 50%;
+      transform: translateY(38%);
+    }
+
+    @include breakpoint-up(desktop) {
+      margin-left: 25px;
+      top: 50%;
+      transform: translateY(-15%);
+    }
   }
 
   p {
