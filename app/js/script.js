@@ -1,11 +1,17 @@
 console.log("Javascript is running");
 
 const buttons = document.querySelectorAll(".profile-card-bottom__btn");
-const data = fetch("/data.json")
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => console.log(data));
+
+const getData = async function () {
+  let url = "/data.json",
+    data = {};
+
+  data = await fetch(url).then((res) => res.json());
+
+  return data;
+};
+
+fitData = getData();
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", (event) => {
