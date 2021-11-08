@@ -2,16 +2,11 @@ console.log("Javascript is running");
 
 const buttons = document.querySelectorAll(".profile-card-bottom__btn");
 
-const getData = async function () {
-  let url = "/data.json",
-    data = {};
+let JSONdata;
 
-  data = await fetch(url).then((res) => res.json());
 
-  return data;
-};
-
-fitData = getData();
+getData()
+.then((data) => (JSONdata = data))
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", (event) => {
@@ -27,4 +22,10 @@ function changeClass(event) {
       buttons[i].classList.remove("active");
     }
   }
+}
+
+async function getData() {
+  const response = await fetch("/data.json");
+  const data = await response.json();
+  return data;
 }
