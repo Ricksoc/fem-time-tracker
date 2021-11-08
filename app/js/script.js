@@ -19,7 +19,9 @@ buttons.forEach((btn) => {
 });
 
 async function getData() {
-  const response = await fetch("../data.json");
+  const response = await fetch(
+    "https://github.com/Ricksoc/fem-time-tracker/blob/main/data.json"
+  );
   const data = await response.json();
   return data;
 }
@@ -34,7 +36,6 @@ function changeClass(event) {
 }
 
 function setPeriod(period) {
-
   JSONdata.forEach((obj, idx) => {
     currentTime = obj["timeframes"][period.toLowerCase()]["current"];
     currentExt = currentTime === 1 ? "hr" : "hrs";
