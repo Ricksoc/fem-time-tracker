@@ -1,6 +1,10 @@
 console.log("Javascript is running");
 
 const buttons = document.querySelectorAll(".profile-card-bottom__btn");
+const titles = document.querySelectorAll(".activity-card__title");
+const currentTimes = document.querySelectorAll(".current-time");
+const cardPeriods = document.querySelectorAll("activity-card__period");
+const prevActivity = document.querySelectorAll("activity-card__previous");
 
 let JSONdata;
 
@@ -31,4 +35,6 @@ function changeClass(event) {
 
 function setPeriod(period) {
   console.log(period);
+
+  titles.forEach((act) => console.log(act.innerHTML));
 }
