@@ -3,10 +3,10 @@ console.log("Javascript is running");
 const buttons = document.querySelectorAll(".profile-card-bottom__btn");
 const titles = document.querySelectorAll(".activity-card__title");
 const currentTimes = document.querySelectorAll(".current-time");
-const cardPeriods = document.querySelectorAll("activity-card__period");
-const prevActivity = document.querySelectorAll("activity-card__previous");
+const cardPeriods = document.querySelectorAll(".activity-card__period");
+const prevActivity = document.querySelectorAll(".activity-card__previous");
 
-let JSONdata;
+let JSONdata = {};
 
 getData().then((data) => (JSONdata = data));
 
@@ -34,7 +34,23 @@ function changeClass(event) {
 }
 
 function setPeriod(period) {
-  console.log(period);
 
-  titles.forEach((act) => console.log(act.innerHTML));
+  JSONdata.forEach((obj, idx) => {
+    currentTime = obj["timeframes"][period.toLowerCase()]["current"];
+    currentExt = currentTime === 1 ? "hr" : "hrs";
+
+    prevTime = obj["timeframes"][period.toLowerCase()]["previous"];
+    prevExt = prevTime === 1 ? "hr" : "hrs";
+
+    currentTimes[idx].innerHTML = currentTime + currentExt;
+    prevActivity[idx].innerHTML = prevTime + prevExt;
+
+    if (period === "Daily") {
+      cardPeriods[idx].innerHTML = "Yesterday";
+    } else if (period === "Weekly") {
+      cardPeriods[idx].innerHTML = "Last Week";
+    } else {
+      cardPeriods[idx].innerHTML = "Last Month";
+    }
+  });
 }
