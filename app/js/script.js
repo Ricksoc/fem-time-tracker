@@ -35,7 +35,7 @@ async function getData(jsonPath) {
     const data = await response.json();
     return data;
   } else {
-    const data = await response;
+    const data = await response.json();
     console.log(data);
     return data;
   }
