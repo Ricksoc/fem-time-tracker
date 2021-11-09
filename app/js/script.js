@@ -13,10 +13,7 @@ let jsonPath;
 const host = window.location.host;
 
 loc = host === "127.0.0.1:5500" ? "local" : "remote";
-jsonPath =
-  host === "127.0.0.1:5500"
-    ? "./data.json"
-    : "../data.json";
+jsonPath = host === "127.0.0.1:5500" ? "./data.json" : "../data.json";
 console.log(loc);
 
 getData(jsonPath).then((data) => (JSONdata = data));
@@ -30,7 +27,7 @@ buttons.forEach((btn) => {
 });
 
 async function getData(jsonPath) {
-  response = await fetch(jsonPath);
+  response = await fetch(jsonPath).catch((err) => console.log(err));
   if (loc === "local") {
     const data = await response.json();
     return data;
