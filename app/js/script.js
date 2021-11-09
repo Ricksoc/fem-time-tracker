@@ -7,8 +7,19 @@ const cardPeriods = document.querySelectorAll(".activity-card__period");
 const prevActivity = document.querySelectorAll(".activity-card__previous");
 
 let JSONdata = {};
+let response;
+let loc;
+let jsonPath;
+const host = window.location.host;
 
-getData().then((data) => (JSONdata = data));
+loc = host === "127.0.0.1:5500" ? "local" : "remote";
+jsonPath =
+  host === "127.0.0.1:5500"
+    ? "./data.json"
+    : "https://github.com/Ricksoc/fem-time-tracker/blob/main/data.json";
+console.log(loc);
+
+getData(jsonPath).then((data) => (JSONdata = data));
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", (event) => {
@@ -18,12 +29,16 @@ buttons.forEach((btn) => {
   });
 });
 
-async function getData() {
-  const response = await fetch(
-    "https://github.com/Ricksoc/fem-time-tracker/blob/main/data.json"
-  );
-  const data = await response.json();
-  return data;
+async function getData(jsonPath) {
+  response = await fetch(jsonPath);
+  if (loc === "local") {
+    const data = await response.json();
+    return data;
+  } else {
+    const data = await response;
+    console.log(data);
+    return data;
+  }
 }
 function changeClass(event) {
   for (let i = 0; i < buttons.length; i++) {
