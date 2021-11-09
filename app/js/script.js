@@ -13,8 +13,8 @@ let jsonPath;
 const host = window.location.host;
 
 loc = host === "127.0.0.1:5500" ? "local" : "remote";
-jsonPath = host === "127.0.0.1:5500" ? "./data.json" : "../data.json";
-console.log(loc);
+jsonPath = host === "127.0.0.1:5500" ? "./data.json" : "../../../data.json";
+console.log(loc, jsonPath);
 
 getData(jsonPath).then((data) => (JSONdata = data));
 
