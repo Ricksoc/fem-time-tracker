@@ -16,7 +16,7 @@ loc = host === "127.0.0.1:5500" ? "local" : "remote";
 jsonPath =
   host === "127.0.0.1:5500"
     ? "./data.json"
-    : "https://github.com/Ricksoc/fem-time-tracker/blob/main/data.json";
+    : "../data.json";
 console.log(loc);
 
 getData(jsonPath).then((data) => (JSONdata = data));
