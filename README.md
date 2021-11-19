@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Completed Time-Tracker Screenshot](./images/FEM-Time-Tracker.png)
+![Completed Time-Tracker Screenshot](./images/FEM-Time-Tracker-Screenshot.png)
 
 ### Links
 
